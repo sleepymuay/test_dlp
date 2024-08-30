@@ -15,3 +15,6 @@
 วันเกิด: 15/08/2005
 ที่อยู่: 678/90 ถนนลาดพร้าว แขวงลาดยาว เขตจตุจักร กรุงเทพฯ 10900
 อีเมล: example.student@example.ac.th
+
+First Name : Mr. Supachot Suksawat
+Cust Name : Dr. Bruh
