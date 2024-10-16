@@ -1,0 +1,230 @@
+XML
+<?xml version="1.0" encoding="UTF-8"?>
+<bookstore>
+    <book category="fiction">
+        <title lang="en">The Great Gatsby</title>
+        <author>F. Scott Fitzgerald</author>
+        <year>1925</year>
+        <price>10.99</price>
+    </book>
+    <book category="programming">
+        <title lang="en">Learning Python</title>
+        <author>Mark Lutz</author>
+        <year>2013</year>
+        <price>39.99</price>
+    </book>
+    <book category="history">
+        <title lang="en">A Brief History of Time</title>
+        <author>Stephen Hawking</author>
+        <year>1988</year>
+        <price>15.99</price>
+    </book>
+</bookstore>
+
+
+HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Webpage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: navy;
+        }
+        p {
+            font-size: 18px;
+        }
+        a {
+            color: darkgreen;
+        }
+        ul {
+            list-style-type: square;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Webpage</h1>
+    </header>
+
+    <section>
+        <p>This is a simple HTML example with basic elements.</p>
+        <p>You can learn more about HTML <a href="https://www.w3schools.com/html/" target="_blank">here</a>.</p>
+    </section>
+
+    <section>
+        <h2>My Favorite Hobbies</h2>
+        <ul>
+            <li>Reading books</li>
+            <li>Programming</li>
+            <li>Traveling</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>Contact me at <a href="mailto:someone@example.com">someone@example.com</a></p>
+    </footer>
+</body>
+</html>
+
+
+Powershell
+# Define the directory to search
+$directoryPath = "C:\Example\Directory"
+
+# Get a list of all files in the directory and subdirectories
+$files = Get-ChildItem -Path $directoryPath -Recurse
+
+# Loop through the files and display them in the console
+foreach ($file in $files) {
+    Write-Host "File: $($file.FullName)"
+}
+
+# Export the list of files to a text file
+$outputFile = "C:\Example\file_list.txt"
+$files | Select-Object FullName | Out-File -FilePath $outputFile
+
+# Notify the user that the process is complete
+Write-Host "File list exported to $outputFile"
+
+
+x86_assembly
+
+section .data
+    hello_msg db 'Hello, World!', 0xA  ; The message to print, followed by newline
+    hello_len equ $ - hello_msg        ; Length of the message
+
+section .text
+    global _start
+
+_start:
+    ; Write "Hello, World!" to stdout
+    mov eax, 4               ; syscall number for sys_write
+    mov ebx, 1               ; file descriptor 1 = stdout
+    mov ecx, hello_msg       ; pointer to the message
+    mov edx, hello_len       ; message length
+    int 0x80                 ; interrupt to make the syscall
+
+    ; Exit the program
+    mov eax, 1               ; syscall number for sys_exit
+    xor ebx, ebx             ; return code 0
+    int 0x80                 ; interrupt to make the syscall
+
+Source Code - vhdl
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+-- Entity Declaration
+entity and_gate is
+    Port (
+        A : in  STD_LOGIC;
+        B : in  STD_LOGIC;
+        Y : out STD_LOGIC
+    );
+end and_gate;
+
+-- Architecture Definition
+architecture Behavioral of and_gate is
+begin
+    Y <= A and B;  -- AND logic operation
+end Behavioral;
+
+
+
+Source Code - verilog
+module and_gate (
+    input wire A,  // Input A
+    input wire B,  // Input B
+    output wire Y  // Output Y
+);
+
+assign Y = A & B;  // AND logic operation
+
+endmodule
+
+
+
+
+Source Code - r
+# Simple R script to plot a sine wave
+
+# Generate sequence of numbers from 0 to 2*pi
+x <- seq(0, 2*pi, length.out = 100)
+
+# Calculate sine of the values
+y <- sin(x)
+
+# Plot the sine wave
+plot(x, y, type = "l", col = "blue", lwd = 2, 
+     main = "Sine Wave", xlab = "x", ylab = "sin(x)")
+
+
+
+Source Code - ruby
+# Define a method to print a message
+def greet
+  puts "Hello, World!"
+end
+
+# Call the method
+greet
+
+
+
+Source Code - perl example
+#!/usr/bin/perl
+use strict;
+use warnings;
+
+# Print Hello, World to the console
+print "Hello, World!\n";
+
+
+
+
+Source Code - java
+public class HelloWorld {
+    public static void main(String[] args) {
+        // Print Hello, World to the console
+        System.out.println("Hello, World!");
+    }
+}
+
+
+
+
+Source Code - Cfamily
+#include <stdio.h>
+C
+int main() {
+    // Print Hello, World to the console
+    printf("Hello, World!\n");
+    return 0;
+}
+
+C++
+#include <iostream>
+
+int main() {
+    // Print Hello, World to the console
+    std::cout << "Hello, World!" << std::endl;
+    return 0;
+}
+
+C#
+using System;
+
+class HelloWorld
+{
+    static void Main()
+    {
+        // Print Hello, World to the console
+        Console.WriteLine("Hello, World!");
+    }
+}
