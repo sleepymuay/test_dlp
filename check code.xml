@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<customerData>
+    <customer>
+        <firstName>John</firstName>
+        <lastName>Doe</lastName>
+        <email>john.doe@example.com</email>
+        <phone>+1-555-1234</phone>
+        <address>
+            <street>123 Main St</street>
+            <city>Anytown</city>
+            <state>CA</state>
+            <postalCode>90210</postalCode>
+        </address>
+        <paymentInfo>
+            <creditCardNumber>4111111111111111</creditCardNumber>
+            <expirationDate>12/2024</expirationDate>
+            <cvv>123</cvv>
+        </paymentInfo>
+        <socialSecurityNumber>123-45-6789</socialSecurityNumber>
+        <passportNumber>987654321</passportNumber>
+    </customer>
+</customerData>
