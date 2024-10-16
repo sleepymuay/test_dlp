@@ -74,48 +74,6 @@ HTML
 </html>
 
 
-Powershell
-# Define the directory to search
-$directoryPath = "C:\Example\Directory"
-
-# Get a list of all files in the directory and subdirectories
-$files = Get-ChildItem -Path $directoryPath -Recurse
-
-# Loop through the files and display them in the console
-foreach ($file in $files) {
-    Write-Host "File: $($file.FullName)"
-}
-
-# Export the list of files to a text file
-$outputFile = "C:\Example\file_list.txt"
-$files | Select-Object FullName | Out-File -FilePath $outputFile
-
-# Notify the user that the process is complete
-Write-Host "File list exported to $outputFile"
-
-
-x86_assembly
-
-section .data
-    hello_msg db 'Hello, World!', 0xA  ; The message to print, followed by newline
-    hello_len equ $ - hello_msg        ; Length of the message
-
-section .text
-    global _start
-
-_start:
-    ; Write "Hello, World!" to stdout
-    mov eax, 4               ; syscall number for sys_write
-    mov ebx, 1               ; file descriptor 1 = stdout
-    mov ecx, hello_msg       ; pointer to the message
-    mov edx, hello_len       ; message length
-    int 0x80                 ; interrupt to make the syscall
-
-    ; Exit the program
-    mov eax, 1               ; syscall number for sys_exit
-    xor ebx, ebx             ; return code 0
-    int 0x80                 ; interrupt to make the syscall
-
 Source Code - vhdl
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
